@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./assets/style.css" media="screen" title="no title" charset="utf-8">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js" ></script>
+  <title>待辦事項</title>
+</head>
+<body>
+  <H1>hello wooooooooooorld</H1>
+  <form action="/list" method="POST">
+    待辦事項：<input type="text" id ="listName" name="listName" /><br />
+    待辦內容：<input type="text" id ="listContent" name="listContent"><br />
+    <input type="submit" value="Submit" />
+  </form>
+  <h1>等待做的事情</h1>
+  <% if(userinfo.length) { %>
+    <ul>
+      <% userinfo.forEach(function(userinfo){ %>
+        <li><%= userinfo['listName'] %> <%= userinfo['listContent'] %></li>
+      <% }) %>
+    </ul>
+  <% } %>
+</body>
+</html>
